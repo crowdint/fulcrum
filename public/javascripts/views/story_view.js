@@ -158,6 +158,15 @@ var StoryView = FormView.extend({
 
   startEdit: function() {
     this.model.set({editing: true});
+    $(this.el).find('textarea').autoResize({
+      onResize: function(){
+        $(this).css({opacity:0.8});
+      },
+      animateCallback: function(){
+        $(this).css({opacity:1});
+      },
+      animateDuration: 300,
+      extraSpace: 40 });
   },
 
   cancelEdit: function() {
