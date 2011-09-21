@@ -20,6 +20,12 @@ gem 'transitions', '0.0.9', :require => ["transitions", "active_record/transitio
 
 gem 'fastercsv', '1.5.3', :platforms => :ruby_18
 gem 'compass', '>= 0.11.5'
+
+#added last rake version to fix issue on ruby 1.9.3-preview
+#more information => https://github.com/jimweirich/rake/issues/51
+#TODO: update rake
+gem 'rake', '0.9.3.beta.1'
+
 # (using standard csv lib if ruby version is 1.9)
 
 # Use unicorn as the web server
